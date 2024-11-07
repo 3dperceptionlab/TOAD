@@ -1,0 +1,12 @@
+pandas
+matplotlib
+numpy
+opencv-python
+Pillow
+joblib
+ipdb
+dotmap
+wandb
+openai
+torch
+transformers

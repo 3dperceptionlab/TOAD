@@ -1,0 +1,32 @@
+name: default
+pretrain: 
+seed: 1024
+eval: False # train or eval mode (equivalent to zero-shot)
+data:
+  dataset: 'TVSeries' # TVSeries or THUMOS14
+  anno_path: '/workspace/annotations/'
+  data_path: '/nvme/'
+  num_segments: 8 # 8 16 32 64
+  future_steps: 1
+  workers: 8
+  batch_size: 32
+  few_shot: False # 1 2 4 8 samples per class
+  img_tmpl: 'frame_{:05d}.jpg'
+  index_bias: 1
+  downsample: 6
+model:
+  classifier: 'prompt' # 'class_only' 'prompt' 'mixed'
+  encoder:
+    mlp: False # False uses classes otherwise Linear layer with the same dimension
+    extra_layers: False # False adds normalization and ReLU layers after the encoder
+solver:
+  type: 'cosine'
+  epochs: 30
+  start_epoch: 0
+  optim: 'adamw'
+  lr: 5.e-5
+  lr_warmup_step: 5
+  weight_decay: 0.2
+  eval_freq: 1
+logging:
+  freq: 10

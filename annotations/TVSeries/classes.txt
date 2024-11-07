@@ -1,0 +1,31 @@
+background
+pick something up
+point
+drink
+stand up
+run
+sit down
+read
+smoke
+drive car
+open door
+give something
+use computer
+write
+close door
+go down stairway
+go up stairway
+throw something
+get in/out of car
+hang up phone
+eat
+answer phone
+clap
+dress up
+undress
+kiss
+fall/trip
+wave
+pour
+punch
+fire weapon
